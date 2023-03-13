@@ -6,6 +6,12 @@ public class MainForm1Controller {
     public ComboBox<String> cmbLanguage;
 
     public void initialize() {
+        // listener
+        cmbLanguage.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            System.out.println("new value : " +newValue);
+            System.out.println("old value : " +oldValue);
+        });
+
         loadData();
     }
 
