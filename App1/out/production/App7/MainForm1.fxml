@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="197.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainForm1Controller">
+   <children>
+      <Label layoutX="26.0" layoutY="11.0" text="Combo Box" textFill="#2b00ff">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="43.0" prefHeight="0.0" prefWidth="561.0" />
+      <ComboBox fx:id="cmbLanguage" layoutX="26.0" layoutY="58.0" prefHeight="31.0" prefWidth="529.0" promptText="languages" />
+   </children>
+</AnchorPane>
