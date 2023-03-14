@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainForm5Controller">
+   <children>
+      <ImageView fitHeight="408.0" fitWidth="606.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@ultravoilet-holo-wallpaper-2000x1333_39.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
