@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="444.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainForm2Controller">
    <children>
       <TextField fx:id="txtInputLanguage" layoutX="23.0" layoutY="23.0" onAction="#addDataOnAction" prefHeight="31.0" prefWidth="534.0" promptText="Input Language">
