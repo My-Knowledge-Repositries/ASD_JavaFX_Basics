@@ -28,6 +28,11 @@ public class MainForm7Controller {
         for (Customer c : Database.customerDataList) {
             Button btn = new Button("Delete");
             obList.add(new CustomerTM(c.getNic(), c.getName(), c.getAddress(), c.getSalary(), btn));
+
+            btn.setOnAction((e) -> {
+                Database.customerDataList.remove(c);
+            });
+
         }
         tblCustomer.setItems(obList);
     }
