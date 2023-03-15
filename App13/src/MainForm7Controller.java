@@ -1,9 +1,9 @@
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+
+import java.util.Optional;
 
 public class MainForm7Controller {
     public TableView<CustomerTM> tblCustomer;
@@ -22,6 +22,12 @@ public class MainForm7Controller {
         loadData();
     }
 
+    // 2nd method
+    /*ObservableList<CustomerTM> obList = FXCollections.observableArrayList();*/
+
+    /*2nd method*/
+    // obList.clear();
+
     private void loadData() {
         ObservableList<CustomerTM> obList = FXCollections.observableArrayList();
         for (Customer c : Database.customerDataList) {
@@ -29,10 +35,13 @@ public class MainForm7Controller {
             obList.add(new CustomerTM(c.getNic(), c.getName(), c.getAddress(), c.getSalary(), btn));
 
             btn.setOnAction((e) -> {
-                Database.customerDataList.remove(c);
-                loadData();
+                Alert conf = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure?", ButtonType.YES, ButtonType.NO);
+                Optional<ButtonType> buttonType = conf.showAndWait(); //1.8 optional => null pointer exception
+                if (buttonType.get() == ButtonType.YES) {
+                    Database.customerDataList.remove(c);
+                    loadData();
+                }
             });
-
         }
         tblCustomer.setItems(obList);
     }
