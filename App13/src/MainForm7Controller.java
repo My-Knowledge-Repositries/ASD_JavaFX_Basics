@@ -19,7 +19,6 @@ public class MainForm7Controller {
         colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
         colSalary.setCellValueFactory(new PropertyValueFactory<>("salary"));
         colDelete.setCellValueFactory(new PropertyValueFactory<>("btn"));
-
         loadData();
     }
 
@@ -31,6 +30,7 @@ public class MainForm7Controller {
 
             btn.setOnAction((e) -> {
                 Database.customerDataList.remove(c);
+                loadData();
             });
 
         }
